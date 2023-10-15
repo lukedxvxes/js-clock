@@ -1,0 +1,91 @@
+#clock {
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  background: #4d4d4d;
+  position: relative;
+}
+
+.hands {
+  --rotation: 0;
+  height: 35%;
+  background: #141414;
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  width: 10px;
+  transform-origin: bottom;
+  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+  border-radius: 20px 0px 0px 0px;
+  z-index: 1;
+  transition: all 0.2s ease;
+  &.second-hand {
+    width: 5px;
+    height: 40%;
+    background: #968c8c;
+    z-index: 0;
+  }
+
+  &.minute-hand {
+    --rotation: 90;
+    height: 45%;
+    background: #2d2d2d;
+  }
+}
+
+.number {
+  --rotation: 0;
+  position: absolute;
+  top: 0;
+  transform: rotate(calc(var(--rotation) * 1deg));
+  width: 100%;
+  height: 100%;
+  text-align: center;
+
+  &.number-1 {
+    --rotation: 30;
+  }
+
+  &.number-2 {
+    --rotation: 60;
+  }
+
+  &.number-3 {
+    --rotation: 90;
+  }
+
+  &.number-4 {
+    --rotation: 120;
+  }
+
+  &.number-5 {
+    --rotation: 150;
+  }
+
+  &.number-6 {
+    --rotation: 180;
+  }
+
+  &.number-7 {
+    --rotation: 210;
+  }
+
+  &.number-8 {
+    --rotation: 240;
+  }
+
+  &.number-9 {
+    --rotation: 270;
+  }
+
+  &.number-10 {
+    --rotation: 300;
+  }
+
+  &.number-11 {
+    --rotation: 330;
+  }
+  &.number-12 {
+    --rotation: 360;
+  }
+}
